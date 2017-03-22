@@ -1,6 +1,2 @@
-<<<<<<< HEAD
-# Papers
-=======
-# Documents
-Papers
->>>>>>> 3caea4a75bcfe0af1208aad51dc11fb89844a760
+
+This is a repo for storing Documents about Software Development. These documents can be about Javascript, C#, .NET, Design Patterns, etc..
