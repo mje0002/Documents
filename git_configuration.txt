@@ -1,0 +1,24 @@
+[user]
+        name = USERNAME
+        email = USER.EMAIL
+[alias]
+        hist = log --pretty=format:\"%C(Yellow)%h%Creset %ad, %C(white)%s%Creset %C(cyan)%d%Creset %C(Yellow)[%Creset%an%C(Yellow)]%Creset\" --date=format:\"%Y-%m-%d %H:%M:%S\"
+        branchdiff = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+[color]
+        ui = auto
+        branch = auto
+        diff = auto
+        status = auto
+[color "branch"]
+        current = yellow reverse
+        local = yellow
+        remote = green
+[color "diff"]
+        meta = yellow bold
+        frag = magenta bold
+        old = red bold
+        new = green bold
+[color "status"]
+        added = yellow
+        changed = green
+        untracked = cyan

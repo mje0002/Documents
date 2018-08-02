@@ -1,0 +1,71 @@
+######################################
+# NPM ALIAS
+######################################
+alias npmb='npm run build'
+alias npms='npm start'
+
+#####################################
+# GIT ALIASES
+#####################################
+alias ga='git add'
+alias gc='git commit'
+alias gb='git branch'
+alias gch='git checkout'
+alias gl='git log'
+alias gr='git rebase'
+alias gs='git status'
+alias gdt='git difftool'
+alias gd='git diff'
+alias gdns='git diff --name-status'
+alias gdt='git difftool'
+alias gf='git fetch'
+alias gh='git hist'
+alias gsubi='git submodule init'
+alias gsubu='git submodule update'
+
+####################################
+# FILE SYS ALIASES
+####################################
+alias CD='cd'
+alias LS='ls'
+
+####################################
+# TERRAFORM ALIASES
+####################################
+alias tf='terraform'
+alias tfg='terraform get'
+alias tfp='terraform plan'
+
+###################################
+# DOCKER ALIASES
+###################################
+alias dk='docker'
+alias dki='docker images'
+alias dkrmi='docker rmi'
+alias dkps='docker ps'
+alias dkpsa='docker ps -a'
+alias dkrm='docker rm'
+alias dkrma='docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)'
+alias dkrmia='docker rmi $(docker images -a -q)'
+
+alias dkc='docker-compose'
+alias dkcb='docker-compose build'
+alias dkcu='docker-compose up'
+alias dkcude='docker-compose up -d'
+alias dkcd='docker-compose down'
+
+################################
+# COLORS
+ ################################
+PS1='\w\[\033[0;32m\]$( git branch 2> /dev/null | cut -f2 -d\* -s | sed "s/^ / [/" | sed "s/$/]/" )\[\033[0m\] \$ '
+
+# LS common Colored
+export CLICOLOR=1
+export LSCOLORS=GxFxCxDxBxegedabagaced
+
+################################
+# MISC
+################################
+# Tell grep to highlight matches
+export GREP_OPTIONS='--color=auto'
+
