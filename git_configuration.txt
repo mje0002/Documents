@@ -4,11 +4,14 @@
 [alias]
         hist = log --pretty=format:\"%C(Yellow)%h%Creset %ad, %C(white)%s%Creset %C(cyan)%d%Creset %C(Yellow)[%Creset%an%C(Yellow)]%Creset\" --date=format:\"%Y-%m-%d %H:%M:%S\"
         branchdiff = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+        locatedead = "! git branch -vv | grep 'origin/.*: gone]' | awk '{print $1}'"
+        cleanlocal = "! git branch -vv | grep 'origin/.*: gone]' | awk '{print $1}' | xargs git branch -D"
+        diffcount = "!f() { git log --oneline \"$1\" \"^$2\" | wc -l; }; f" 
 [color]
         ui = auto
         branch = auto
         diff = auto
-        status = auto
+        status = auto        
 [color "branch"]
         current = yellow reverse
         local = yellow
@@ -22,3 +25,5 @@
         added = yellow
         changed = green
         untracked = cyan
+[rerere]
+	enabled = true
