@@ -7,6 +7,8 @@ alias npms='npm start'
 #####################################
 # GIT ALIASES
 #####################################
+alias gld='git locatedead'
+alias gcl='git cleanlocal'
 alias ga='git add'
 alias gc='git commit'
 alias gb='git branch'
@@ -68,4 +70,7 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 ################################
 # Tell grep to highlight matches
 export GREP_OPTIONS='--color=auto'
+alias grep="grep --color=auto"
+alias fgrep="fgrep --color=auto"
+alias egrep="egrep --color=auto"
 
